@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Livros\ApagarLivro.aspx" />
+    <Content Include="Admin\Livros\EditarLivro.aspx" />
     <Content Include="Admin\Livros\Livros.aspx" />
     <Content Include="App_Data\bd.mdf" />
     <Content Include="App_Data\bd_log.ldf">
@@ -99,6 +101,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Livros\ApagarLivro.aspx.cs">
+      <DependentUpon>ApagarLivro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Livros\ApagarLivro.aspx.designer.cs">
+      <DependentUpon>ApagarLivro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Livros\EditarLivro.aspx.cs">
+      <DependentUpon>EditarLivro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Livros\EditarLivro.aspx.designer.cs">
+      <DependentUpon>EditarLivro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Livros\Livros.aspx.cs">
       <DependentUpon>Livros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
