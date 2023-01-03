@@ -17,6 +17,7 @@ namespace M17AB_TrabalhoModelo_202223.Models
         public string nif;
         public string password;
         public int perfil;
+        public int sal;
 
         BaseDados bd;
 
@@ -28,8 +29,8 @@ namespace M17AB_TrabalhoModelo_202223.Models
         //adicionar
         public void Adicionar()
         {
-            string sql = @"INSERT INTO utilizadores(email,nome,morada,nif,password,estado,perfil)
-                            VALUES (@email,@nome,@morada,@nif,HASHBYTES('SHA2_512',@password),@estado,@perfil)";
+            string sql = @"INSERT INTO utilizadores(email,nome,morada,nif,password,estado,perfil,sal)
+                            VALUES (@email,@nome,@morada,@nif,HASHBYTES('SHA2_512',concat(@password,@sal)),@estado,@perfil,@sal)";
             List<SqlParameter> parametros = new List<SqlParameter>()
             {
                 new SqlParameter()
@@ -73,6 +74,12 @@ namespace M17AB_TrabalhoModelo_202223.Models
                     ParameterName="@perfil",
                     SqlDbType=System.Data.SqlDbType.Int,
                     Value=this.perfil
+                },
+                new SqlParameter()
+                {
+                    ParameterName="@sal",
+                    SqlDbType=System.Data.SqlDbType.Int,
+                    Value=this.sal
                 },
             };
             bd.executaSQL(sql, parametros);

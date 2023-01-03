@@ -70,6 +70,9 @@
     <Content Include="Admin\Livros\ApagarLivro.aspx" />
     <Content Include="Admin\Livros\EditarLivro.aspx" />
     <Content Include="Admin\Livros\Livros.aspx" />
+    <Content Include="Admin\Utilizadores\ApagarUtilizador.aspx" />
+    <Content Include="Admin\Utilizadores\EditarUtilizador.aspx" />
+    <Content Include="Admin\Utilizadores\Utilizadores.aspx" />
     <Content Include="App_Data\bd.mdf" />
     <Content Include="App_Data\bd_log.ldf">
       <DependentUpon>bd.mdf</DependentUpon>
@@ -122,6 +125,27 @@
     </Compile>
     <Compile Include="Admin\Livros\Livros.aspx.designer.cs">
       <DependentUpon>Livros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Utilizadores\ApagarUtilizador.aspx.cs">
+      <DependentUpon>ApagarUtilizador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Utilizadores\ApagarUtilizador.aspx.designer.cs">
+      <DependentUpon>ApagarUtilizador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Utilizadores\EditarUtilizador.aspx.cs">
+      <DependentUpon>EditarUtilizador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Utilizadores\EditarUtilizador.aspx.designer.cs">
+      <DependentUpon>EditarUtilizador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Utilizadores\Utilizadores.aspx.cs">
+      <DependentUpon>Utilizadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Utilizadores\Utilizadores.aspx.designer.cs">
+      <DependentUpon>Utilizadores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\BaseDados.cs" />
     <Compile Include="index.aspx.cs">
@@ -178,7 +202,6 @@
   <ItemGroup>
     <Folder Include="Admin\Consultas\" />
     <Folder Include="Admin\Emprestimos\" />
-    <Folder Include="Admin\Utilizadores\" />
     <Folder Include="Public\Imagens\" />
     <Folder Include="User\Emprestimos\" />
   </ItemGroup>

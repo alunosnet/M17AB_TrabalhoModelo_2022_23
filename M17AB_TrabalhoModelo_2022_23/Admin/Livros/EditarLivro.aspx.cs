@@ -14,6 +14,7 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Livros
         protected void Page_Load(object sender, EventArgs e)
         {
             //TODO: Validar sessão
+            if (IsPostBack) return;
             try
             {
                 //querystring nlivro
@@ -31,10 +32,10 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Livros
                 tbAno.Text = dados.Rows[0]["ano"].ToString();
                 tbAutor.Text = dados.Rows[0]["autor"].ToString();
                 tbPreco.Text = dados.Rows[0]["preco"].ToString();
-                tbData.Text = dados.Rows[0]["data_aquisicao"].ToString();
+                tbData.Text = DateTime.Parse(dados.Rows[0]["data_aquisicao"].ToString()).ToString("yyyy-MM-dd");
                 dpTipo.Text = dados.Rows[0]["tipo"].ToString();
-
-                imgCapa.ImageUrl = @"~\Public\Imagens\" + nlivro + ".jpg";
+                Random rnd=new Random();
+                imgCapa.ImageUrl = @"~\Public\Imagens\" + nlivro + ".jpg?"+rnd.Next(9999);
                 imgCapa.Width = 300;
             }
             catch
@@ -45,6 +46,65 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Livros
 
         protected void btAtualizar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string nome = tbNome.Text;
+                if (nome.Trim().Length < 3)
+                {
+                    throw new Exception("O nome é muito pequeno.");
+                }
+                int ano = int.Parse(tbAno.Text);
+                if (ano > DateTime.Now.Year || ano < 0)
+                {
+                    throw new Exception("O ano não é válido");
+                }
+                DateTime data = DateTime.Parse(tbData.Text);
+                if (data > DateTime.Now)
+                {
+                    throw new Exception("A data tem de ser inferior à data atual");
+                }
+                Decimal preco = Decimal.Parse(tbPreco.Text);
+                if (preco < 0 || preco > 100)
+                {
+                    throw new Exception("O preço deve estar entre 0 e 100");
+                }
+                string autor = tbAutor.Text;
+                if (autor.Trim().Length < 3)
+                {
+                    throw new Exception("O nome do autor é muito pequeno");
+                }
+                string tipo = dpTipo.SelectedValue;
+                if (tipo == "")
+                {
+                    throw new Exception("O tipo não é válido");
+                }
+                Livro livro = new Livro();
+                livro.nome = nome;
+                livro.preco = preco;
+                livro.ano = ano;
+                livro.data_aquisicao = data;
+                livro.autor = autor;
+                livro.tipo = tipo;
+                livro.estado = 1;
+                livro.nlivro = int.Parse(Request["nlivro"].ToString());
+                livro.atualizaLivro();
+
+                if (fuCapa.HasFile)
+                {
+                    string ficheiro = Server.MapPath(@"~\Public\Imagens\");
+                    ficheiro = ficheiro + livro.nlivro + ".jpg";
+                    fuCapa.SaveAs(ficheiro);
+                }
+
+                lbErro.Text = "O livro foi atualizado com sucesso";
+                ScriptManager.RegisterStartupScript(this, typeof(Page),
+                    "Redirecionar", "returnMain('livros.aspx')", true);
+            }
+            catch (Exception ex)
+            {
+                lbErro.Text = "Ocorreu o seguinte erro: " + ex.Message;
+                return;
+            }
 
         }
     }

@@ -17,7 +17,7 @@
     </div>
     <div class="from-group">
         <label for="ContentPlaceHolder1_tbPreco">Preço:</label>
-        <asp:TextBox ID="tbPreco" CssClass="form-control" runat="server" TextMode="Number" /><br />
+        <asp:TextBox ID="tbPreco" CssClass="form-control" runat="server"  /><br />
     </div>
     <div class="from-group">
         <label for="ContentPlaceHolder1_tbAutor">Autor:</label>
