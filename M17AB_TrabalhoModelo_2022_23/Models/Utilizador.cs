@@ -171,7 +171,7 @@ namespace M17AB_TrabalhoModelo_202223.Models
         public void atualizarPassword(string guid, string password)
         {
             string sql = "UPDATE utilizadores set password=HASHBYTES('SHA2_512',@password),estado=1,lnkRecuperar=null WHERE lnkRecuperar=@lnk";
-
+            //TODO: SAL
             List<SqlParameter> parametros = new List<SqlParameter>()
             {
                 new SqlParameter() {ParameterName="@password",SqlDbType=SqlDbType.VarChar,Value=password},

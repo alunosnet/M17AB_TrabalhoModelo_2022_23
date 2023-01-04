@@ -11,6 +11,7 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Utilizadores
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //validar a sessão de utilizador
 
         }
     }
