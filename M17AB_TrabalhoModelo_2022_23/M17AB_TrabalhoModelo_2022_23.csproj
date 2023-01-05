@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Emprestimos\Emprestimos.aspx" />
     <Content Include="Admin\Livros\ApagarLivro.aspx" />
     <Content Include="Admin\Livros\EditarLivro.aspx" />
     <Content Include="Admin\Livros\Livros.aspx" />
@@ -103,10 +104,18 @@
     <Content Include="Public\js\bootstrap.js" />
     <Content Include="Public\js\bootstrap.min.js" />
     <Content Include="Public\js\codigo.js" />
+    <Content Include="recuperarpassword.aspx" />
     <Content Include="registo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Emprestimos\Emprestimos.aspx.cs">
+      <DependentUpon>Emprestimos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Emprestimos\Emprestimos.aspx.designer.cs">
+      <DependentUpon>Emprestimos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Livros\ApagarLivro.aspx.cs">
       <DependentUpon>ApagarLivro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +179,13 @@
     <Compile Include="Models\Livro.cs" />
     <Compile Include="Models\Utilizador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recuperarpassword.aspx.cs">
+      <DependentUpon>recuperarpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperarpassword.aspx.designer.cs">
+      <DependentUpon>recuperarpassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="registo.aspx.cs">
       <DependentUpon>registo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -212,7 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\Consultas\" />
-    <Folder Include="Admin\Emprestimos\" />
     <Folder Include="Public\Imagens\" />
     <Folder Include="User\Emprestimos\" />
   </ItemGroup>

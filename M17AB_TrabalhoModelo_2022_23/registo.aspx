@@ -9,8 +9,8 @@
     Morada:<asp:TextBox runat="server" ID="tb_morada"></asp:TextBox><br />
     Nif:<asp:TextBox runat="server" ID="tb_nif"></asp:TextBox><br />
     Password:<asp:TextBox runat="server" ID="tb_password" TextMode="Password"></asp:TextBox><br />
-    <asp:Button runat="server" ID="bt_guardar" Text="Regitar" OnClick="bt_guardar_Click" /><br />
+    <asp:Button runat="server" ID="bt_guardar" Text="Registar" OnClick="bt_guardar_Click" /><br />
     <asp:Label runat="server" ID="lb_erro"></asp:Label>
     <!--Recaptcha-->
-    <div class="g-recaptcha" data-sitekey="6LepgmgdAAAAAEvfiS0Xdhh1S-i1Py8w8VBiuViE"></div>
+    <div class="g-recaptcha" data-sitekey="6LczdM8jAAAAAMje4BXy1d-vly027TN18ZuO0YcK"></div>
 </asp:Content>

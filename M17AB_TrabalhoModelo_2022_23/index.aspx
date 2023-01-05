@@ -8,8 +8,8 @@
         Email:<asp:TextBox runat="server" ID="tb_Email"></asp:TextBox><br />
         Password:<asp:TextBox runat="server" ID="tb_Password" TextMode="Password"></asp:TextBox><br />
         <asp:Label runat="server" ID="lb_erro"></asp:Label><br />
-        <asp:Button runat="server" ID="bt_login" />
-        <asp:Button runat="server" ID="bt_recuperar" OnClick="bt_recuperar_Click" />
+        <asp:Button runat="server" ID="bt_login" Text="Login" />
+        <asp:Button runat="server" ID="bt_recuperar" Text="Recuperar password" OnClick="bt_recuperar_Click" />
     </div>
     <!--Pesquisa-->
     

@@ -6,7 +6,8 @@
 <head runat="server">
     <link href="/Public/css/bootstrap.css" rel="stylesheet" />
     <link href="/Public/css/css.css" rel="stylesheet" />
-    <script src="/Public/js/bootstrap.js"></script>
+    <script src="Public/js/bootstrap.bundle.js"></script>
+
     <script src="/Public/js/codigo.js"></script>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -19,7 +20,7 @@
             <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="z-index:2">
                 <a class="navbar-brand" href="/index.aspx">PSI</a>
                 <!--menu hamburguer-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!--menu hamburguer-->
@@ -56,14 +57,15 @@
                             <a class="nav-link" href="/User/Emprestimos/Historico.aspx">Histórico</a>
                         </li>
                         <%}%>
+                        
                         <!--Menu da homepage-->
                         <% if (Request.Url.LocalPath.ToLower().EndsWith("index.aspx")){%>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ordenação</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item" href="index.aspx?ordena=1">Por Preço</a>
-                                <a class="dropdown-item" href="index.aspx?ordena=2">Por Autor</a>
-                            </div>
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ordenação</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="index.aspx?ordena=1">Por Preço</a></li>
+                                <li><a class="dropdown-item" href="index.aspx?ordena=2">Por Autor</a></li>
+                            </ul>
                         </li>
                         <%}%>
                     </ul>
