@@ -20,11 +20,33 @@ namespace M17AB_TrabalhoModelo_2022_23
             try
             {
                 //validar os dados do form
-                string nome = tb_nome.Text;
-                string email = tb_email.Text;
-                string morada = tb_morada.Text;
-                string nif = tb_nif.Text;
-                string palavra_passe = tb_password.Text;
+                //validar o form
+                string nome = tb_nome.Text.Trim();
+                if (nome.Length < 3)
+                {
+                    throw new Exception("O nome tem de ter pelo menos 3 letras");
+                }
+                string email = tb_email.Text.Trim();
+                if (email == String.Empty || email.Contains("@") == false ||
+                   email.Contains('.') == false)
+                {
+                    throw new Exception("O email indicado não é válido");
+                }
+                string morada = tb_morada.Text.Trim();
+                if (morada.Length < 3)
+                {
+                    throw new Exception("A morada tem de ter pelo menos 3 letras");
+                }
+                string nif = tb_nif.Text.Trim();
+                if (nif.Length != 9)
+                {
+                    throw new Exception("O nif tem de ter 9 números");
+                }
+                string password = tb_password.Text.Trim();
+                if (password.Length < 5)
+                {
+                    throw new Exception("A password tem de ter pelo menos 5 letras");
+                }
                 int perfil = 1;
 
                 //validar recaptcha
@@ -40,7 +62,7 @@ namespace M17AB_TrabalhoModelo_2022_23
                 utilizador.nome=nome;
                 utilizador.email=email;
                 utilizador.morada=morada;
-                utilizador.password=palavra_passe;
+                utilizador.password= password;
                 utilizador.perfil=perfil;
                 Random rnd=new Random();
                 utilizador.sal = rnd.Next(9999);    //Isto devia estar na função adicionar
@@ -52,6 +74,7 @@ namespace M17AB_TrabalhoModelo_2022_23
             }catch(Exception erro)
             {
                 lb_erro.Text = erro.Message;
+                lb_erro.CssClass = "alert alert-danger";
             }
         }
     }

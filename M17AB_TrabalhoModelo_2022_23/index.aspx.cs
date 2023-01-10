@@ -18,7 +18,6 @@ namespace M17AB_TrabalhoModelo_2022_23
             if (Session["perfil"]!=null)
                 divLogin.Visible=false;
 
-            //TODO:ordernar e pesquisar livros
             //ordenar os livros?
             int? ordenar = 0;
             try

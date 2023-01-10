@@ -115,7 +115,6 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Emprestimos
             Emprestimo emp = new Emprestimo();
             if(e.CommandName=="receber")
             {
-                //TODO: não permitir receber empréstimos já recebidos
                 emp.alterarEstadoEmprestimo(idemprestimo);
                 AtualizarDDLeitores();
                 AtualizarDDLivros();
