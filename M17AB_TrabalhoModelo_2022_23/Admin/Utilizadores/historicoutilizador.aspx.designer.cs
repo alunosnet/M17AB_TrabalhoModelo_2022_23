@@ -11,43 +11,34 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Utilizadores
 {
 
 
-    public partial class ApagarUtilizador
+    public partial class historicoutilizador
     {
 
         /// <summary>
-        /// lbNome control.
+        /// gvHistorico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNome;
+        protected global::System.Web.UI.WebControls.GridView gvHistorico;
 
         /// <summary>
-        /// lbId control.
+        /// lbErro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbId;
+        protected global::System.Web.UI.WebControls.Label lbErro;
 
         /// <summary>
-        /// btnRemover control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemover;
-
-        /// <summary>
-        /// btVoltar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btVoltar;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -7,57 +7,66 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M17AB_TrabalhoModelo_2022_23.Admin.Utilizadores
+namespace M17AB_TrabalhoModelo_2022_23
 {
 
 
-    public partial class EditarUtilizador
+    public partial class detalheslivro
     {
 
         /// <summary>
-        /// tbNome control.
+        /// imgCapa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNome;
+        protected global::System.Web.UI.WebControls.Image imgCapa;
 
         /// <summary>
-        /// tbMorada control.
+        /// lbNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMorada;
+        protected global::System.Web.UI.WebControls.Label lbNome;
 
         /// <summary>
-        /// tbNif control.
+        /// lbAutor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNif;
+        protected global::System.Web.UI.WebControls.Label lbAutor;
 
         /// <summary>
-        /// btEditar control.
+        /// lbAno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btEditar;
+        protected global::System.Web.UI.WebControls.Label lbAno;
 
         /// <summary>
-        /// btVoltar control.
+        /// lbPreco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btVoltar;
+        protected global::System.Web.UI.WebControls.Label lbPreco;
+
+        /// <summary>
+        /// btReservar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btReservar;
 
         /// <summary>
         /// lbErro control.

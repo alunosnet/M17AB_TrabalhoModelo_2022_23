@@ -1,4 +1,5 @@
-﻿using M17AB_TrabalhoModelo_202223.Models;
+﻿using M17AB_TrabalhoModelo_202223.Classes;
+using M17AB_TrabalhoModelo_202223.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,7 +14,11 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Livros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //TODO: Validar sessão
+            //validar sessão
+            if (UserLogin.ValidarSessao(Session, Request, "0") == false)
+            {
+                Response.Redirect("~/index.aspx");
+            }
             if (IsPostBack) return;
             try
             {

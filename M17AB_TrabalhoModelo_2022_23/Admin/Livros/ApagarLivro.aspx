@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Confirmar apagar livro</h1>
-    Nº Livro:<asp:Label runat="server" ID="lbNlivro" CssClass="form-control"></asp:Label>
+    Nº Livro:<asp:Label  runat="server" ID="lbNlivro" CssClass="form-control"></asp:Label>
     <br />Nome:<asp:Label runat="server" ID="lbNome" CssClass="form-control"></asp:Label>
     <br />Capa<asp:Image CssClass="figure-img" runat="server" ID="imgCapa" />
     <br />

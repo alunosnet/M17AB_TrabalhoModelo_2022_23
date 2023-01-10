@@ -7,92 +7,110 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M17AB_TrabalhoModelo_2022_23
+namespace M17AB_TrabalhoModelo_2022_23.User
 {
 
 
-    public partial class index
+    public partial class user
     {
 
         /// <summary>
-        /// divLogin control.
+        /// divPerfil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLogin;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPerfil;
 
         /// <summary>
-        /// tb_Email control.
+        /// lbNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_Email;
+        protected global::System.Web.UI.WebControls.Label lbNome;
 
         /// <summary>
-        /// tb_Password control.
+        /// lbMorada control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_Password;
+        protected global::System.Web.UI.WebControls.Label lbMorada;
 
         /// <summary>
-        /// lb_erro control.
+        /// lbnif control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_erro;
+        protected global::System.Web.UI.WebControls.Label lbnif;
 
         /// <summary>
-        /// bt_login control.
+        /// btEditar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_login;
+        protected global::System.Web.UI.WebControls.Button btEditar;
 
         /// <summary>
-        /// bt_recuperar control.
+        /// divEditar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_recuperar;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEditar;
 
         /// <summary>
-        /// tbPesquisa control.
+        /// tbNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPesquisa;
+        protected global::System.Web.UI.WebControls.TextBox tbNome;
 
         /// <summary>
-        /// btPesquisar control.
+        /// tbMorada control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btPesquisar;
+        protected global::System.Web.UI.WebControls.TextBox tbMorada;
 
         /// <summary>
-        /// divLivros control.
+        /// tbNif control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLivros;
+        protected global::System.Web.UI.WebControls.TextBox tbNif;
+
+        /// <summary>
+        /// btAtualizar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btAtualizar;
+
+        /// <summary>
+        /// btCancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btCancelar;
     }
 }
