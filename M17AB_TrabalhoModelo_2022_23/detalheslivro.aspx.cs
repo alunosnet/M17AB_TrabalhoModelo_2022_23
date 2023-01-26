@@ -22,7 +22,7 @@ namespace M17AB_TrabalhoModelo_2022_23
                 lbAno.Text = dados.Rows[0]["ano"].ToString();
                 lbAutor.Text = dados.Rows[0]["autor"].ToString();
                 lbPreco.Text = String.Format("{0:c}", Decimal.Parse(dados.Rows[0]["preco"].ToString()));
-                string ficheiro = @"~\Public\Images\" + dados.Rows[0]["nlivro"].ToString() + ".jpg";
+                string ficheiro = @"~\Public\Imagens\" + dados.Rows[0]["nlivro"].ToString() + ".jpg";
                 imgCapa.ImageUrl = ficheiro;
                 imgCapa.Width = 200;
                 //criar cookie

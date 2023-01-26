@@ -50,12 +50,12 @@ namespace M17AB_TrabalhoModelo_2022_23
                 int perfil = 1;
 
                 //validar recaptcha
-                var respostaRecaptcha = Request.Form["g-Recaptcha-Response"];
-                var valido = ReCaptcha.Validate(respostaRecaptcha);
-                if (valido == false)
-                {
-                    throw new Exception("Tem de provar que não é um robot");
-                }
+                //var respostaRecaptcha = Request.Form["g-Recaptcha-Response"];
+                //var valido = ReCaptcha.Validate(respostaRecaptcha);
+                //if (valido == false)
+                //{
+                //    throw new Exception("Tem de provar que não é um robot");
+                //}
                 //inserir o utilizador na bd
                 Utilizador utilizador= new Utilizador();
                 utilizador.nif= nif;

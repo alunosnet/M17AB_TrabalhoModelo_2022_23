@@ -57,8 +57,8 @@ create index ilivro_nome on livros(nome)
 create index ilivro_autor on livros(autor)
 
 Criar o admin:
-INSERT INTO utilizadores(email,nome,morada,nif,password,estado,perfil)
-VALUES ('admin@gmail.com','admin','viseu','123123123',HASHBYTES('SHA2_512','12345'),1,0)
+INSERT INTO utilizadores(email,nome,morada,nif,password,estado,perfil,sal)
+VALUES ('admin@gmail.com','admin','viseu','123123123',HASHBYTES('SHA2_512',concat('12345',9999)),1,0,9999)
 
 declare @i int;
 declare @nr_registos int;

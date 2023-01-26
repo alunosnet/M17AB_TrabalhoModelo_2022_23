@@ -53,10 +53,24 @@ namespace M17AB_TrabalhoModelo_2022_23.User
         protected void btAtualizar_Click(object sender, EventArgs e)
         {
             int id = int.Parse(Session["id"].ToString());
-            string nome = tbNome.Text;
-            string morada = tbMorada.Text;
-            string nif= tbNif.Text;
-            //TODO: validar os dados
+            
+           
+            string nome = tbNome.Text.Trim();
+            if (nome.Length < 3)
+            {
+                throw new Exception("O nome tem de ter pelo menos 3 letras");
+            }
+
+            string morada = tbMorada.Text.Trim();
+            if (morada.Length < 3)
+            {
+                throw new Exception("A morada tem de ter pelo menos 3 letras");
+            }
+            string nif = tbNif.Text.Trim();
+            if (nif.Length != 9)
+            {
+                throw new Exception("O nif tem de ter 9 números");
+            }
             Utilizador utilizador= new Utilizador();
             utilizador.nome = nome;
             utilizador.morada= morada;
