@@ -167,6 +167,8 @@ namespace M17AB_TrabalhoModelo_2022_23.Admin.Livros
             BoundField bfnome=new BoundField();
             bfnome.HeaderText = "Nome";
             bfnome.DataField = "nome";
+           // bfnome.ControlStyle.CssClass = "batatas";
+            //bfnome.HeaderStyle.CssClass = "classe do thead";
             gvLivros.Columns.Add(bfnome);
             //ano
             BoundField bfano = new BoundField();
